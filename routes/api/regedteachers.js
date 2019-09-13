@@ -1,9 +1,9 @@
 const router = require("express").Router();
 const regedController = require("../../controllers/regedController");
 
-// Matches with "/api/reged/:id"
+// Matches with "/api/reged"
 router
-  .route("/:id")
-  .put(regedController.findByIdAndUpdate)
+  .route("/")
+  .put(regedController.find)
 
 module.exports = router;
