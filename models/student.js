@@ -16,34 +16,34 @@ const studentSchema = new Schema ({
         type: String
     },
     goal1: {
-        type: Text
+        type: String
     },
     goal2: {
-        type: Text
+        type: String
     },
     goal3: {
-        type: Text
+        type: String
     },
     goal4: {
-        type: Text
+        type: String
     },
     goal5: {
-        type: Text
+        type: String
     },
     service1: {
-        type: Text
+        type: String
     },
     service2: {
-        type: Text
+        type: String
     },
     service3: {
-        type: Text
+        type: String
     },
     service4: {
-        type: Text
+        type: String
     },
     service5: {
-        type: Text
+        type: String
     },
     Mon1Teacher: [{
         type: String
