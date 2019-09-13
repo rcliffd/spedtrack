@@ -1,19 +1,32 @@
 import React from 'react';
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import NewUser from "./pages/NewUser";
+import RegED from "./pages/RegED";
+import SPED from "./pages/SPED";
+import Navbar from "./components/Navbar/Navbar";
+import Home from "./pages/Home";
 import './App.css';
 import './style.css';
 
 
 function App() {
+  
   return (
-    <div>
-      
-        <h1>SPEDtrack</h1>
-          <a href="/reg-ed" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Reg Ed</a>
-          <a href="/sped" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">SPED</a>
-          <a href="/newUser" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">New User</a>
-      
-     
-    </div>
+    <Router>
+      <div>
+        <Navbar />
+       
+        <Switch>
+          {/* <Route exact path="/" component={Jumbotron} heading="SPEDtrack" /> */}
+          <Route exact path="/" component={Home} />
+          <Route exact path="/RegED" component={RegED} />
+          <Route exact path="/SPED" component={SPED} />
+          <Route exact path="/NewUser" component={NewUser} />
+          
+          
+        </Switch>
+      </div>
+    </Router>
   );
 }
 

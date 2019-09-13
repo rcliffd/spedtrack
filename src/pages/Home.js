@@ -1,9 +1,10 @@
 import React from "react";
 import Jumbotron from "../components/Jumbotron/Jumbotron";
+import Directory from "../components/Directory/Directory";
 
 
 
-class NewUser extends React.Component {
+class Home extends React.Component {
 
 
 
@@ -11,12 +12,14 @@ class NewUser extends React.Component {
        return (
            <div>
                <Jumbotron
-                heading="New User"
+                heading="SPEDtrack "
                 />
+                <Directory />
 
            </div>
+           
        )
    } 
 }
 
-export default NewUser;
+export default Home;

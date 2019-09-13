@@ -1,7 +1,22 @@
 import React from "react";
+import Jumbotron from "../components/Jumbotron/Jumbotron";
 
-return (
-    <div>
-        <h1>Reg ED Page</h1>
-    </div>
-)
+
+
+class RegED extends React.Component {
+
+
+
+   render(props) {
+       return (
+           <div>
+               <Jumbotron
+                heading="Reg Ed"
+                />
+
+           </div>
+       )
+   } 
+}
+
+export default RegED;
