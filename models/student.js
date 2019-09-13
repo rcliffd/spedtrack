@@ -45,139 +45,139 @@ const studentSchema = new Schema ({
     service5: {
         type: Text
     },
-    Mon1Students: [{
+    Mon1Teacher: [{
         type: String
     }],
-    Mon2Students: [{
+    Mon2Teacher: [{
         type: String
     }],
-    Mon3Students: [{
+    Mon3Teacher: [{
         type: String
     }],
-    Mon4Students: [{
+    Mon4Teacher: [{
         type: String
     }],
-    Mon5Students: [{
+    Mon5Teacher: [{
         type: String
     }],
-    Mon6Students: [{
+    Mon6Teacher: [{
         type: String
     }],
-    Mon7Students: [{
+    Mon7Teacher: [{
         type: String
     }],
-    Mon8Students: [{
+    Mon8Teacher: [{
         type: String
     }],
-    Mon9Students: [{
+    Mon9Teacher: [{
         type: String
     }],
-    Tues1Students: [{
+    Tues1Teacher: [{
         type: String
     }],
-    Tues2Students: [{
+    Tues2Teacher: [{
         type: String
     }],
-    Tues3Students: [{
+    Tues3Teacher: [{
         type: String
     }],
-    Tues4Students: [{
+    Tues4Teacher: [{
         type: String
     }],
-    Tues5Students: [{
+    Tues5Teacher: [{
         type: String
     }],
-    Tues6Students: [{
+    Tues6Teacher: [{
         type: String
     }],
-    Tues7Students: [{
+    Tues7Teacher: [{
         type: String
     }],
-    Tues8Students: [{
+    Tues8Teacher: [{
         type: String
     }],
-    Tues9Students: [{
+    Tues9Teacher: [{
         type: String
     }],
-    Wed1Students: [{
+    Wed1Teacher: [{
         type: String
     }],
-    Wed2Students: [{
+    Wed2Teacher: [{
         type: String
     }],
-    Wed3Students: [{
+    Wed3Teacher: [{
         type: String
     }],
-    Wed4Students: [{
+    Wed4Teacher: [{
         type: String
     }],
-    Wed5Students: [{
+    Wed5Teacher: [{
         type: String
     }],
-    Wed6Students: [{
+    Wed6Teacher: [{
         type: String
     }],
-    Wed7Students: [{
+    Wed7Teacher: [{
         type: String
     }],
-    Wed8Students: [{
+    Wed8Teacher: [{
         type: String
     }],
-    Wed9Students: [{
+    Wed9Teacher: [{
         type: String
     }],    
-    Thur1Students: [{
+    Thur1Teacher: [{
         type: String
     }],
-    Thur2Students: [{
+    Thur2Teacher: [{
         type: String
     }],
-    Thur3Students: [{
+    Thur3Teacher: [{
         type: String
     }],
-    Thur4Students: [{
+    Thur4Teacher: [{
         type: String
     }],
-    Thur5Students: [{
+    Thur5Teacher: [{
         type: String
     }],
-    Thur6Students: [{
+    Thur6Teacher: [{
         type: String
     }],
-    Thur7Students: [{
+    Thur7Teacher: [{
         type: String
     }],
-    Thur8Students: [{
+    Thur8Teacher: [{
         type: String
     }],
-    Thur9Students: [{
+    Thur9Teacher: [{
         type: String
     }],
-    Fri1Students: [{
+    Fri1Teacher: [{
         type: String
     }],
-    Fri2Students: [{
+    Fri2Teacher: [{
         type: String
     }],
-    Fri3Students: [{
+    Fri3Teacher: [{
         type: String
     }],
-    Fri4Students: [{
+    Fri4Teacher: [{
         type: String
     }],
-    Fri5Students: [{
+    Fri5Teacher: [{
         type: String
     }],
-    Fri6Students: [{
+    Fri6Teacher: [{
         type: String
     }],
-    Fri7Students: [{
+    Fri7Teacher: [{
         type: String
     }],
-    Fri8Students: [{
+    Fri8Teacher: [{
         type: String
     }],
-    Fri9Students: [{
+    Fri9Teacher: [{
         type: String
     }]
 });
