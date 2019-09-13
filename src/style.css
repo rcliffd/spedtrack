@@ -1,10 +1,11 @@
-.btn-primary {
+.btn-outline-secondary {
     display: inline-flexbox;
     width: 200px;
     margin: 20px 30px;
+    background-color: white;
 }
 
-.container {
+.container, .levels-input {
     margin: 0 auto;
     text-align: center;
 }

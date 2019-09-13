@@ -3,6 +3,7 @@ import Jumbotron from "../components/Jumbotron/Jumbotron";
 
 
 
+
 class SPED extends React.Component {
 
 
@@ -13,6 +14,9 @@ class SPED extends React.Component {
                <Jumbotron
                 heading="SPED"
                 />
+                <div className="container">
+                <a href="/NewStudent" className="btn btn-outline-secondary" role="button" aria-pressed="true">Add New Student</a>
+                </div>
 
            </div>
        )
