@@ -6,6 +6,15 @@ const studentSchema = new Schema ({
         type: String,
         required: true
     },
+    SPEDteacher: {
+        type: String
+    },
+    mathLevel: {
+        type: String
+    },
+    readingLevel: {
+        type: String
+    },
     goal1: {
         type: Text
     },
