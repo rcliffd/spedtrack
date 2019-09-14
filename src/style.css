@@ -3,6 +3,8 @@
     width: 200px;
     margin: 20px 30px;
     background-color: white;
+    border: 1px solid rgb(212, 191, 2);
+    color:  rgb(212, 191, 2);
 }
 
 .container, .levels-input {
@@ -14,7 +16,38 @@
     display: inline-block;
 }
 
-.jumbotron {
+.navbar-expand-lg {
+    background-color: rgb(212, 191, 2) !important;
+    color: white !important; 
+}
+
+.navbar-brand, .nav-link {
+    color: white !important;
+}
+
+button.navbar-toggler {
+    border: none;
+}
+
+span.navbar-toggler-icon {
+    color: white !important;
+}
+
+* {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.jumbotron{
+    background-color: rgb(212, 191, 2);
+    color: white; 
     font-size: 50px;
+    -webkit-text-stroke-width: 1px;
+   -webkit-text-stroke-color: white;
+   text-shadow: 0px 8px 8px rgba(0, 0, 0, 0.50);
+   line-height: 50px;
+}
+
+h4, h5 {
+    margin: 7px 0px 7px 0px;
 }
 
