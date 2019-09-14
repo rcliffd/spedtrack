@@ -1,6 +1,6 @@
 import React from "react";
 
-function StudentInfo() {
+function StudentInfo(props) {
     return (
         <div className="container student-info">
             <form>
@@ -37,7 +37,6 @@ function StudentInfo() {
                     </div>
                     
                 </div>
-                <button type="submit" className="btn btn-outline-secondary">Add Student</button>
             </form>
         </div>
     )
