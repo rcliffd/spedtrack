@@ -16,7 +16,7 @@ app.use(passport.initialize());
 if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/build"));
 }
-// Add routes, both API and view
+// Routes
 app.use(routes);
 
 require('./routes/loginUser')(app);

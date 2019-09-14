@@ -4,6 +4,7 @@ const studentsController = require("../../controllers/studentsController");
 router
   .route("/")
   .post(studentsController.create)
+  .get(studentsController.findAll)
 
 // Matches with "/api/students/:SPEDteacher"
 router

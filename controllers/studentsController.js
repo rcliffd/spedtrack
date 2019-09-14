@@ -1,32 +1,38 @@
-const db = require("../models");
+const Student = require("../models/student");
 
 module.exports = {
     find: function(req, res) {
-      db.Student
+      Student
         .find(req.params.SPEDteacher)
         .then(dbModel => res.json(dbModel))
         .catch(err => res.status(422).json(err));
     },
+    findAll: function(req, res) {
+      Student
+        .find({})
+        .then(dbModel => res.json(dbModel))
+        .catch(err => res.status(422).json(err));
+    },
     findById: function(req, res) {
-        db.Student
+        Student
           .findById(req.params.id)
           .then(dbModel => res.json(dbModel))
           .catch(err => res.status(422).json(err));
     },
     create: function(req, res) {
-        db.Student
+        Student
           .create(req.body)
           .then(dbModel => res.json(dbModel))
           .catch(err => res.status(422).json(err));
     },
     update: function(req, res) {
-        db.Student
+        Student
           .findByIdAndUpdate(req.params.id)
           .then(dbModel => res.json(dbModel))
           .catch(err => res.status(422).json(err));
     },
     delete: function(req, res) {
-        db.Student
+        Student
           .findByIdAndRemove(req.params.id)
           .then(dbModel => res.json(dbModel))
           .catch(err => res.status(422).json(err));
