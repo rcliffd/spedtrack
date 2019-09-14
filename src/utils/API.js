@@ -2,8 +2,9 @@ import axios from "axios";
 
 export default {
   // Post a new student
-  createStudent: function() {
-    return axios.post("/api/students");
+  createStudent: function(data) {
+    return axios.post("/api/students", data);
+    
     },
   // Find student by SPED teacher
   getStudentsBySPED: function(SPEDteacher) {

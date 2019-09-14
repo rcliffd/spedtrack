@@ -14,6 +14,8 @@ class NewStudent extends React.Component {
     state={
         students: [],
         studentName: "",
+        mathLevel: "",
+        readingLevel: "",
     }
 
     handleInputChange=event=> {
@@ -26,17 +28,20 @@ class NewStudent extends React.Component {
 
 
     handleFormSubmit=event=> {
-        // event.prevent.Default();
+        event.preventDefault();
+       
         if(this.state.studentName) {
-            alert("New Student added:" + this.state.studentName)
+           
+            
             API.createStudent({
                 studentName: this.state.studentName,
-                mathLevel: this.state.value,
-                readingLevel: this.state.value,
+                mathLevel: this.state.mathLevel,
+                readingLevel: this.state.readingLevel
                 
             })
             .then(res =>
-                this.setState({ students: res.data})
+                
+                this.setState({ students: res.data, studentName: "", mathLevel: "", readingLevel: ""})
               )
             .catch(err=> console.log(err));
             

@@ -6,9 +6,9 @@ function StudentInfo(props) {
             <form>
                 <div className="form-group">
                     <label htmlFor="studentName"><h4>Student Name</h4></label>
-                    <input type="text" className="form-control" id="inputName" placeholder="First and Last Name"></input>
+                    {/* <input type="text" className="form-control" id="inputName" placeholder="First and Last Name"></input> */}
 
-                    <div classname="levels-input container">
+                    {/* <div classname="levels-input container">
                         <h4>Levels Last Recorded</h4>
                         <div classname="row">
                             <div className="col-md-6">
@@ -34,7 +34,7 @@ function StudentInfo(props) {
                                 </select>
                             </div>
                         </div>
-                    </div>
+                    </div> */}
                     
                 </div>
             </form>
