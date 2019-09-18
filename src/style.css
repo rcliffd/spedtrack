@@ -5,11 +5,13 @@
     background-color: white;
     border: 1px solid rgb(212, 191, 2);
     color:  rgb(212, 191, 2);
+    border-radius: 25px;
 }
 
 .container, .levels-input {
     margin: 0 auto;
     text-align: center;
+    
 }
 
 .directory {
@@ -28,6 +30,8 @@
 button.navbar-toggler {
     border: none;
 }
+
+
 
 span.navbar-toggler-icon {
     color: white !important;
@@ -49,5 +53,10 @@ span.navbar-toggler-icon {
 
 h4, h5 {
     margin: 7px 0px 7px 0px;
+}
+
+.custom-checkbox {
+    display: inline-block;
+    margin: 0px 10px;
 }
 

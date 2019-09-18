@@ -2,7 +2,7 @@ import React from "react";
 
 function StudentInfo(props) {
     return (
-        <div className="container student-info">
+        <div className="student-info container">
             <form>
                 <div className="form-group">
                     <label htmlFor="studentName"><h4>Student Name</h4></label>
