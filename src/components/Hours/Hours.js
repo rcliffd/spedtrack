@@ -5,7 +5,7 @@ function Hours(props) {
        
             
             <div className="col-md-6">
-            <h4>Hours/Block</h4>
+            <h4>Hours</h4>
                                 <select className="form-control" name="hours" onChange={props.handleInputChange}>
                                 {/**put onchagne here */}
                                 <option value="1">placeholder</option>

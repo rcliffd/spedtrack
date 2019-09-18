@@ -27,11 +27,12 @@
 
 .card {
     padding: 20px 20px;
-    border: none;
-    box-shadow: 0px 7px 5px rgba(119, 136, 153, 0.30);
+    border: 0.5px solid rgba(212, 191, 2, 0.25);
+    box-shadow: 0px 7px 7px rgba(119, 136, 153, 0.15);
     border-radius: 0px;
-
-    
+    /* border: none;
+    box-shadow: 0px 7px 5px rgba(119, 136, 153, 0.30);
+    border-radius: 20px; */
 }
 
 /* .directory {
@@ -40,7 +41,8 @@
 
 .navbar-expand-lg {
     background-color: rgb(212, 191, 2) !important;
-    color: white !important; 
+    color: white !important;
+    
 }
 
 .navbar-brand, .nav-link {
@@ -69,6 +71,7 @@ span.navbar-toggler-icon {
    -webkit-text-stroke-color: white;
    text-shadow: 0px 8px 8px rgba(0, 0, 0, 0.50);
    line-height: 50px;
+   
 }
 
 h4 {

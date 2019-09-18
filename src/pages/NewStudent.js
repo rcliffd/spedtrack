@@ -81,7 +81,7 @@ class NewStudent extends React.Component {
                     </div>
                 {/* <div className="container"> */}
                     <div className="col-md-6 card">
-                        <div className="row">
+                    <div className="row">
                     <TeacherList></TeacherList>
                     <Hours></Hours>
                     </div>
