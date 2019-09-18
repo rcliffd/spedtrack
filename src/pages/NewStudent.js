@@ -5,6 +5,7 @@ import FormOptions from "../components/StudentInfo/FormOptions"
 import Input from "../components/StudentInfo/Input"
 import ClassDays from "../components/ClassDays/ClassDays"
 import TeacherList from "../components/TeacherList/TeacherList"
+import Hours from "../components/Hours/Hours"
 import FormBtn from "../components/StudentInfo/FormBtn"
 import API from "../utils/API";
 
@@ -61,24 +62,33 @@ class NewStudent extends React.Component {
                 heading="Add New Student"
                 />
                 <div className="container">
-                <StudentInfo/>
-                <form>
-                <Input
-                value={this.state.studentName}
-                handleInputChange={this.handleInputChange}
-                name="studentName"
-                type="text"
-                placeholder="Student's First and Last Name"
-                />
-                </form>
-                <FormOptions
-                value={this.state.value}
-                handleInputChange={this.handleInputChange}
-                />
                 <div className="row">
-                <TeacherList></TeacherList>
-                <ClassDays></ClassDays>
-                </div>
+                    <div className="col-md-6 card">
+                    <StudentInfo/>
+                    <form>
+                    <Input
+                    value={this.state.studentName}
+                    handleInputChange={this.handleInputChange}
+                    name="studentName"
+                    type="text"
+                    placeholder="Student's First and Last Name"
+                    />
+                    </form>
+                    <FormOptions
+                    value={this.state.value}
+                    handleInputChange={this.handleInputChange}
+                    />
+                    </div>
+                {/* <div className="container"> */}
+                    <div className="col-md-6 card">
+                        <div className="row">
+                    <TeacherList></TeacherList>
+                    <Hours></Hours>
+                    </div>
+                    <ClassDays></ClassDays>
+                    </div>
+                    </div>
+                {/* </div> */}
                 <FormBtn
                 onClick={this.handleFormSubmit}
                 >
