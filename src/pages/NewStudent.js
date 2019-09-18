@@ -3,6 +3,7 @@ import Jumbotron from "../components/Jumbotron/Jumbotron";
 import StudentInfo from "../components/StudentInfo/StudentInfo"
 import FormOptions from "../components/StudentInfo/FormOptions"
 import Input from "../components/StudentInfo/Input"
+import ClassDays from "../components/ClassDays/ClassDays"
 import FormBtn from "../components/StudentInfo/FormBtn"
 import API from "../utils/API";
 
@@ -19,6 +20,7 @@ class NewStudent extends React.Component {
     }
 
     handleInputChange=event=> {
+        
         const {name, value} = event.target;
         console.log(name, value)
         this.setState({
@@ -57,6 +59,7 @@ class NewStudent extends React.Component {
                <Jumbotron
                 heading="Add New Student"
                 />
+                <div className="container">
                 <StudentInfo/>
                 <form>
                 <Input
@@ -71,11 +74,13 @@ class NewStudent extends React.Component {
                 value={this.state.value}
                 handleInputChange={this.handleInputChange}
                 />
+                <ClassDays></ClassDays>
                 <FormBtn
                 onClick={this.handleFormSubmit}
                 >
                     Add New Student
                 </FormBtn>
+                </div>
            </div>
        )
    } 
