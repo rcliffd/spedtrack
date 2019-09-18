@@ -4,6 +4,7 @@ import StudentInfo from "../components/StudentInfo/StudentInfo"
 import FormOptions from "../components/StudentInfo/FormOptions"
 import Input from "../components/StudentInfo/Input"
 import ClassDays from "../components/ClassDays/ClassDays"
+import TeacherList from "../components/TeacherList/TeacherList"
 import FormBtn from "../components/StudentInfo/FormBtn"
 import API from "../utils/API";
 
@@ -74,7 +75,10 @@ class NewStudent extends React.Component {
                 value={this.state.value}
                 handleInputChange={this.handleInputChange}
                 />
+                <div className="row">
+                <TeacherList></TeacherList>
                 <ClassDays></ClassDays>
+                </div>
                 <FormBtn
                 onClick={this.handleFormSubmit}
                 >
