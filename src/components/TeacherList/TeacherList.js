@@ -5,7 +5,7 @@ function TeacherList(props) {
        
             
             <div className="col-md-6">
-            <h5>Teacher</h5>
+            <h4>Teacher</h4>
                                 <select className="form-control" name="teacherList" onChange={props.handleInputChange}>
                                 {/**put onchagne here */}
                                 <option value="1">teacher 1</option>

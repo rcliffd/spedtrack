@@ -2,9 +2,9 @@ import React from "react";
 
 function ClassDays() {
     return (
-        
-        <div className="col-md-6">
-            <h5>Class Days</h5>
+        <div>
+        {/* // <div className="col-md-6"> */}
+            <h4>Class Days</h4>
             
             <div className="custom-control custom-checkbox">
             <input type="checkbox" className="custom-control-input" id="customCheck1"/>
@@ -31,8 +31,8 @@ function ClassDays() {
             <label className="custom-control-label" htmlFor="customCheck5">Friday</label>
             </div>
 
-        </div>
-            
+        {/* // </div> */}
+            </div>
 
             
         

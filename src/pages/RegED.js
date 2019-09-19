@@ -3,16 +3,18 @@ import Jumbotron from "../components/Jumbotron/Jumbotron";
 
 
 
+
 class RegED extends React.Component {
 
 
 
-   render(props) {
+   render() {
        return (
            <div>
                <Jumbotron
                 heading="Reg Ed"
                 />
+                
 
            </div>
        )
