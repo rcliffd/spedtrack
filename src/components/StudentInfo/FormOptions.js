@@ -8,7 +8,7 @@ function FormOptions(props) {
                         <h4>Levels Last Recorded</h4>
                         <div className="row">
                             <div className="col-md-6">
-                                <h5>Math</h5>
+                                <h6>Math</h6>
                                 <select className="form-control" name="mathLevel" onChange={props.handleInputChange}>Levels Last Recorded
                                 {/**put onchagne here */}
                                 <option value="Not Applicable">Not Applicable</option>
@@ -20,7 +20,7 @@ function FormOptions(props) {
                                 </select>
                             </div>
                             <div className="col-md-6">
-                                <h5>Reading</h5>
+                                <h6>Reading</h6>
                                 <select className="form-control" name="readingLevel" onChange={props.handleInputChange}>Levels Last Recorded
                                 <option value="Not Appliable">Not Applicable</option>
                                 <option value="Well Below">Well Below</option>
