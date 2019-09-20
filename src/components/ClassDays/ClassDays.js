@@ -31,6 +31,11 @@ function ClassDays() {
             <label className="custom-control-label" htmlFor="customCheck5">Friday</label>
             </div>
 
+            <div className="custom-control custom-checkbox">
+            <input type="checkbox" className="custom-control-input" id="customCheck6"/>
+            <label className="custom-control-label" htmlFor="customCheck6">All Week</label>
+            </div>
+
         {/* // </div> */}
             </div>
 
