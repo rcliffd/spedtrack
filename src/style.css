@@ -12,8 +12,9 @@
 .btn-outline-secondary:hover {
     background-color: rgb(212, 191, 2); 
     color: white;
-    
-  }
+}
+
+
 
 .container, .levels-input {
     margin: 0 auto;
@@ -35,9 +36,17 @@
     border-radius: 20px; */
 }
 
-/* .directory {
-    display: inline-block;
-} */
+.block-card {
+    padding: 0px;   
+}
+
+li, #card-title {
+    text-align: left !important;
+}
+
+.btn-link {
+    color:  rgb(212, 191, 2);
+}
 
 .navbar-expand-lg {
     background-color: rgb(212, 191, 2) !important;
@@ -51,6 +60,12 @@
 
 button.navbar-toggler {
     border: none;
+}
+
+#hourSubmit, #studentSubmit {
+    margin: 0 auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 
@@ -71,6 +86,7 @@ span.navbar-toggler-icon {
    -webkit-text-stroke-color: white;
    text-shadow: 0px 8px 8px rgba(0, 0, 0, 0.50);
    line-height: 50px;
+   border-radius: 0px;
    
 }
 
