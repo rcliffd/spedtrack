@@ -45,141 +45,141 @@ const studentSchema = new Schema ({
     service5: {
         type: String
     },
-    Mon1Teacher: [{
+    Mon1Teacher: {
         type: String
-    }],
-    Mon2Teacher: [{
+    },
+    Mon2Teacher: {
         type: String
-    }],
-    Mon3Teacher: [{
+    },
+    Mon3Teacher: {
         type: String
-    }],
-    Mon4Teacher: [{
+    },
+    Mon4Teacher: {
         type: String
-    }],
-    Mon5Teacher: [{
+    },
+    Mon5Teacher: {
         type: String
-    }],
-    Mon6Teacher: [{
+    },
+    Mon6Teacher: {
         type: String
-    }],
-    Mon7Teacher: [{
+    },
+    Mon7Teacher: {
         type: String
-    }],
-    Mon8Teacher: [{
+    },
+    Mon8Teacher: {
         type: String
-    }],
-    Mon9Teacher: [{
+    },
+    Mon9Teacher: {
         type: String
-    }],
-    Tues1Teacher: [{
+    },
+    Tues1Teacher: {
         type: String
-    }],
-    Tues2Teacher: [{
+    },
+    Tues2Teacher: {
         type: String
-    }],
-    Tues3Teacher: [{
+    },
+    Tues3Teacher: {
         type: String
-    }],
-    Tues4Teacher: [{
+    },
+    Tues4Teacher: {
         type: String
-    }],
-    Tues5Teacher: [{
+    },
+    Tues5Teacher: {
         type: String
-    }],
-    Tues6Teacher: [{
+    },
+    Tues6Teacher: {
         type: String
-    }],
-    Tues7Teacher: [{
+    },
+    Tues7Teacher: {
         type: String
-    }],
-    Tues8Teacher: [{
+    },
+    Tues8Teacher: {
         type: String
-    }],
-    Tues9Teacher: [{
+    },
+    Tues9Teacher: {
         type: String
-    }],
-    Wed1Teacher: [{
+    },
+    Wed1Teacher: {
         type: String
-    }],
-    Wed2Teacher: [{
+    },
+    Wed2Teacher: {
         type: String
-    }],
-    Wed3Teacher: [{
+    },
+    Wed3Teacher: {
         type: String
-    }],
-    Wed4Teacher: [{
+    },
+    Wed4Teacher: {
         type: String
-    }],
-    Wed5Teacher: [{
+    },
+    Wed5Teacher: {
         type: String
-    }],
-    Wed6Teacher: [{
+    },
+    Wed6Teacher: {
         type: String
-    }],
-    Wed7Teacher: [{
+    },
+    Wed7Teacher: {
         type: String
-    }],
-    Wed8Teacher: [{
+    },
+    Wed8Teacher: {
         type: String
-    }],
-    Wed9Teacher: [{
+    },
+    Wed9Teacher: {
         type: String
-    }],    
-    Thur1Teacher: [{
+    },    
+    Thur1Teacher: {
         type: String
-    }],
-    Thur2Teacher: [{
+    },
+    Thur2Teacher: {
         type: String
-    }],
-    Thur3Teacher: [{
+    },
+    Thur3Teacher: {
         type: String
-    }],
-    Thur4Teacher: [{
+    },
+    Thur4Teacher: {
         type: String
-    }],
-    Thur5Teacher: [{
+    },
+    Thur5Teacher: {
         type: String
-    }],
-    Thur6Teacher: [{
+    },
+    Thur6Teacher: {
         type: String
-    }],
-    Thur7Teacher: [{
+    },
+    Thur7Teacher: {
         type: String
-    }],
-    Thur8Teacher: [{
+    },
+    Thur8Teacher: {
         type: String
-    }],
-    Thur9Teacher: [{
+    },
+    Thur9Teacher: {
         type: String
-    }],
-    Fri1Teacher: [{
+    },
+    Fri1Teacher: {
         type: String
-    }],
-    Fri2Teacher: [{
+    },
+    Fri2Teacher: {
         type: String
-    }],
-    Fri3Teacher: [{
+    },
+    Fri3Teacher: {
         type: String
-    }],
-    Fri4Teacher: [{
+    },
+    Fri4Teacher: {
         type: String
-    }],
-    Fri5Teacher: [{
+    },
+    Fri5Teacher: {
         type: String
-    }],
-    Fri6Teacher: [{
+    },
+    Fri6Teacher: {
         type: String
-    }],
-    Fri7Teacher: [{
+    },
+    Fri7Teacher: {
         type: String
-    }],
-    Fri8Teacher: [{
+    },
+    Fri8Teacher: {
         type: String
-    }],
-    Fri9Teacher: [{
+    },
+    Fri9Teacher: {
         type: String
-    }]
+    }
 });
 
 const Student = mongoose.model("Student", studentSchema);
