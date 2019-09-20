@@ -53,6 +53,12 @@ button.navbar-toggler {
     border: none;
 }
 
+#hourSubmit, #studentSubmit {
+    margin: 0 auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
 
 
 span.navbar-toggler-icon {

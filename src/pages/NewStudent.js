@@ -8,6 +8,7 @@ import TeacherList from "../components/TeacherList/TeacherList"
 import Hours from "../components/Hours/Hours"
 import FormBtn from "../components/StudentInfo/FormBtn"
 import API from "../utils/API";
+import NewScheduleTable from "../components/StudentInfo/NewScheduleTable"
 
 
 
@@ -79,22 +80,38 @@ class NewStudent extends React.Component {
                     handleInputChange={this.handleInputChange}
                     />
                     </div>
-                {/* <div className="container"> */}
+                
                     <div className="col-md-6 card">
-                    <div className="row">
-                    <TeacherList></TeacherList>
-                    <Hours></Hours>
+                        <div className="row">
+                            <TeacherList></TeacherList>
+                            <Hours></Hours>
+                        </div>
+
+                        <div>
+                        <ClassDays></ClassDays>
+                        </div>
+                        
+                        <FormBtn
+                        id="hourSubmit"
+                        onClick={this.handleFormSubmit}
+                        >Submit
+                        </FormBtn>
+                          
                     </div>
-                    <ClassDays></ClassDays>
-                    </div>
-                    </div>
-                {/* </div> */}
-                <FormBtn
-                onClick={this.handleFormSubmit}
-                >
-                    Add New Student
-                </FormBtn>
+                   
                 </div>
+                <div className="wrapper">
+                    <NewScheduleTable></NewScheduleTable>
+                </div>
+                <div>
+                        <FormBtn
+                        id="studentSubmit"
+                        onClick={this.handleFormSubmit}
+                        >Add New Student
+                        </FormBtn>
+                    </div>
+                </div>
+                
            </div>
        )
    } 
