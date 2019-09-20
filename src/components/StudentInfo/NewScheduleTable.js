@@ -2,7 +2,7 @@ import React from "react";
 
 function NewScheduleTable() {
     return (
-        <div class="row">
+        <div className="row">
             <div className="card col-md-12">
         
         
@@ -11,10 +11,10 @@ function NewScheduleTable() {
                    
                     {/* <div class="card-header">Student</div> */}
                     
-                    <div class="card-body">
-                        <table class="table table-sm table-hover" id="schedule-table">
+                    <div className="card-body">
+                        <table className="table table-sm table-hover" id="schedule-table">
                             <thead>
-                                <tr class="tr-head">
+                                <tr className="tr-head">
                                     <th scope="col">Teacher Name</th>
                                     
                                     <th scope="col">Hours/Block</th>
