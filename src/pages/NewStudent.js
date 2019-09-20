@@ -16,6 +16,8 @@ class NewStudent extends React.Component {
 
     state={
         students: [],
+        hours: 1,
+        TeacherList: "teacher 1 name",
         studentName: "",
         mathLevel: "",
         readingLevel: "",
@@ -78,12 +80,21 @@ class NewStudent extends React.Component {
     }
 
     handleInputChange=event=> {
-        
-        const {name, value} = event.target;
-        console.log(name, value)
-        this.setState({
-            [name] : value
-        })
+        const {name, value, type} = event.target;
+        console.log(name, value, type)
+        if(type === "checkbox") {
+            let key = `${value}${this.state.hours}Teacher`;
+            console.log(key)
+            this.setState({
+                [key] : this.state.TeacherList
+            }, function() {
+                console.log(this.state)
+            })
+        } else {
+            this.setState({
+                [name] : value
+            })
+        }
     }
 
 
@@ -196,11 +207,13 @@ class NewStudent extends React.Component {
                     <TeacherList value={this.state.value}
                     handleInputChange={this.handleInputChange}>
                     </TeacherList>
-                    <Hours value={this.state.value}
+                    <Hours
                     handleInputChange={this.handleInputChange}>
                     </Hours>
                     </div>
-                    <ClassDays></ClassDays>
+                    <ClassDays
+                    handleInputChange={this.handleInputChange}>
+                    </ClassDays>
                     </div>
                     </div>
                 {/* </div> */}
