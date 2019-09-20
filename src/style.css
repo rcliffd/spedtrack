@@ -35,9 +35,11 @@
     border-radius: 20px; */
 }
 
-/* .directory {
-    display: inline-block;
-} */
+#studentSubmit, #hourSubmit {
+    margin: 0 auto;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
 
 .navbar-expand-lg {
     background-color: rgb(212, 191, 2) !important;
