@@ -8,7 +8,10 @@ import TeacherList from "../components/TeacherList/TeacherList"
 import Hours from "../components/Hours/Hours"
 import FormBtn from "../components/StudentInfo/FormBtn"
 import API from "../utils/API";
+<<<<<<< HEAD
 import NewScheduleTable from "../components/StudentInfo/NewScheduleTable"
+=======
+>>>>>>> e3a6106867f662e20b7df099a62e3c0a97a276ff
 
 
 
@@ -80,6 +83,7 @@ class NewStudent extends React.Component {
                     handleInputChange={this.handleInputChange}
                     />
                     </div>
+<<<<<<< HEAD
                 
                     <div className="col-md-6 card">
                         <div className="row">
@@ -112,6 +116,24 @@ class NewStudent extends React.Component {
                     </div>
                 </div>
                 
+=======
+                {/* <div className="container"> */}
+                    <div className="col-md-6 card">
+                    <div className="row">
+                    <TeacherList></TeacherList>
+                    <Hours></Hours>
+                    </div>
+                    <ClassDays></ClassDays>
+                    </div>
+                    </div>
+                {/* </div> */}
+                <FormBtn
+                onClick={this.handleFormSubmit}
+                >
+                    Add New Student
+                </FormBtn>
+                </div>
+>>>>>>> e3a6106867f662e20b7df099a62e3c0a97a276ff
            </div>
        )
    } 
