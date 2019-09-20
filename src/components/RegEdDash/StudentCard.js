@@ -12,17 +12,17 @@ function StudentCard() {
                 </div>
                 <div className="col-md-4">
                 <div className="custom-control custom-checkbox">
-                    <input type="checkbox" className="custom-control-input" id="customCheck3"/>
+                    <input type="checkbox" className="custom-control-input" id="customCheck1"/>
                     <label className="custom-control-label" htmlFor="customCheck1"></label>
                     </div>
 
                     <div className="custom-control custom-checkbox">
-                    <input type="checkbox" className="custom-control-input" id="customCheck4"/>
+                    <input type="checkbox" className="custom-control-input" id="customCheck2"/>
                     <label className="custom-control-label" htmlFor="customCheck2"></label>
                     </div>
 
                     <div className="custom-control custom-checkbox">
-                    <input type="checkbox" className="custom-control-input" id="customCheck5"/>
+                    <input type="checkbox" className="custom-control-input" id="customCheck3"/>
                     <label className="custom-control-label" htmlFor="customCheck3"></label>
                 </div>
 
