@@ -82,6 +82,14 @@ class NewStudent extends React.Component {
     handleInputChange=event=> {
         const {name, value, type} = event.target;
         console.log(name, value, type)
+        if(type === "select-one" && name === "teacherList") {
+            let teacher = `${value}`
+            this.setState({
+                TeacherList : teacher
+            }, function() {
+                console.log(this.state)
+            })
+        }
         if(type === "checkbox") {
             let key = `${value}${this.state.hours}Teacher`;
             console.log(key)
