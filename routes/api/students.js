@@ -19,5 +19,8 @@ router
   .put(studentsController.update)
   .delete(studentsController.delete)
 
+router
+  .route("/:DayBlockTeacher/:TeacherName")
+  .get(studentsController.findByDayAndBlockTeacher)
 
 module.exports = router;

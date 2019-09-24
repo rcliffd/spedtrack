@@ -36,6 +36,14 @@ module.exports = {
           .findByIdAndRemove(req.params.id)
           .then(dbModel => res.json(dbModel))
           .catch(err => res.status(422).json(err));
+    },
+    findByDayAndBlockTeacher: function(req, res) {
+        const DayBlockTeacher = req.params.DayBlockTeacher
+        const TeacherName = req.params.TeacherName;
+        Student
+          .find({[DayBlockTeacher]:TeacherName})
+          .then(dbModel => res.json(dbModel))
+          .catch(err => res.status(422).json(err));
     }
 
   };
