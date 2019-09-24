@@ -12,7 +12,7 @@ class SPED extends React.Component {
 
    handleGetStudents=event=> {
        API.getStudentsBySPED("Beth Duklas")
-       .then(res => console.log(res))
+       .then(res => this.setState({ students: res.data }))
        .catch(err => console.log(err))
    }
 
