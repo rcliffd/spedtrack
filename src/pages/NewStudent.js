@@ -214,11 +214,25 @@ class NewStudent extends React.Component {
                     handleInputChange={this.handleInputChange}>
                     </ClassDays>
 
+                    
+                    <FormBtn
+                    id="hourSubmit"
+                    onClick={this.handleFormSubmit}
+                    >Submit
+                    </FormBtn>
+                    
+                    
+
                     </div>
                    
                 </div>
                 <div className="wrapper">
-                    <NewScheduleTable></NewScheduleTable>
+                    <NewScheduleTable
+                        teacher={this.state.value}>
+                            
+                        </NewScheduleTable>
+                        
+                        
                 </div>
                 <div>
                         <FormBtn

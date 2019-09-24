@@ -1,14 +1,15 @@
 import React from "react"
 
 function StudentCard() {
+    
     return (
         <div classname="card student-card" id="student-card">
             
             <div className="goals-row row">
                 <div className="col-md-8">
-                <ol>
+                <ul>
                     <li>Goal</li>
-                </ol>
+                </ul>
                 </div>
                 <div className="col-md-4">
                 <div className="custom-control custom-checkbox">
