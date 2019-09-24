@@ -8,8 +8,7 @@ import TeacherList from "../components/TeacherList/TeacherList"
 import Hours from "../components/Hours/Hours"
 import FormBtn from "../components/StudentInfo/FormBtn"
 import API from "../utils/API";
-import NewScheduleTable from "../components/StudentInfo/NewScheduleTable"
-
+import NewScheduleTable from "../components/StudentInfo/NewScheduleTable";
 
 
 
@@ -23,16 +22,6 @@ class NewStudent extends React.Component {
         mathLevel: "",
         readingLevel: "",
         SPEDteacher: "",
-        goal1: "", 
-        goal2: "", 
-        goal3: "", 
-        goal4: "", 
-        goal5: "", 
-        service1: "", 
-        service2: "", 
-        service3: "", 
-        service4: "", 
-        service5: "", 
         Mon1Teacher: "", 
         Mon2Teacher: "", 
         Mon3Teacher: "", 
@@ -94,8 +83,9 @@ class NewStudent extends React.Component {
         if(type === "checkbox") {
             let key = `${value}${this.state.hours}Teacher`;
             console.log(key)
+            console.log(event.target.checked)
             this.setState({
-                [key] : this.state.TeacherList
+                [key] : event.target.checked ? this.state.TeacherList : ""
             }, function() {
                 console.log(this.state)
             })
@@ -104,6 +94,12 @@ class NewStudent extends React.Component {
                 [name] : value
             })
         }
+    }
+
+    testRoute=event=> {
+        event.preventDefault();
+        API.getStudentsByDayAndHour("Mon4Teacher", "JoshJackson")
+        .then(res => console.log(res))
     }
 
 
@@ -118,16 +114,6 @@ class NewStudent extends React.Component {
                 mathLevel: this.state.mathLevel,
                 readingLevel: this.state.readingLevel,
                 SPEDteacher: this.state.SPEDteacher,
-                goal1: this.state.goal1, 
-                goal2: this.state.goal2, 
-                goal3: this.state.goal3, 
-                goal4: this.state.goal4, 
-                goal5: this.state.goal5, 
-                service1: this.state.goal1, 
-                service2: this.state.goal2, 
-                service3: this.state.goal3, 
-                service4: this.state.goal4, 
-                service5: this.state.goal5, 
                 Mon1Teacher: this.state.Mon1Teacher, 
                 Mon2Teacher: this.state.Mon2Teacher, 
                 Mon3Teacher: this.state.Mon3Teacher, 
@@ -176,7 +162,7 @@ class NewStudent extends React.Component {
             })
             .then(res =>
                 
-                this.setState({ students: res.data, studentName: "", mathLevel: "", readingLevel: "",         SPEDteacher: "", goal1: "", goal2: "", goal3: "", goal4: "", goal5: "", service1: "", service2: "", service3: "", service4: "", service5: "", Mon1Teacher: "", Mon2Teacher: "", Mon3Teacher: "", Mon4Teacher: "", Mon5Teacher: "", Mon6Teacher: "", Mon7Teacher: "", Mon8Teacher: "", Mon9Teacher: "", Tues1Teacher: "", Tues2Teacher: "", Tues3Teacher: "", Tues4Teacher: "", Tues5Teacher: "", Tues6Teacher: "", Tues7Teacher: "", Tues8Teacher: "", Tues9Teacher: "", Wed1Teacher: "", Wed2Teacher: "", Wed3Teacher: "", Wed4Teacher: "", Wed5Teacher: "", Wed6Teacher: "", Wed7Teacher: "", Wed8Teacher: "", Wed9Teacher: "",     Thur1Teacher: "", Thur2Teacher: "", Thur3Teacher: "", Thur4Teacher: "", Thur5Teacher: "", Thur6Teacher: "", Thur7Teacher: "", Thur8Teacher: "", Thur9Teacher: "", Fri1Teacher: "", Fri2Teacher: "", Fri3Teacher: "", Fri4Teacher: "", Fri5Teacher: "", Fri6Teacher: "", Fri7Teacher: "", Fri8Teacher: "", Fri9Teacher: "" })
+                this.setState({ students: res.data, studentName: "", mathLevel: "", readingLevel: "",         SPEDteacher: "", Mon1Teacher: "", Mon2Teacher: "", Mon3Teacher: "", Mon4Teacher: "", Mon5Teacher: "", Mon6Teacher: "", Mon7Teacher: "", Mon8Teacher: "", Mon9Teacher: "", Tues1Teacher: "", Tues2Teacher: "", Tues3Teacher: "", Tues4Teacher: "", Tues5Teacher: "", Tues6Teacher: "", Tues7Teacher: "", Tues8Teacher: "", Tues9Teacher: "", Wed1Teacher: "", Wed2Teacher: "", Wed3Teacher: "", Wed4Teacher: "", Wed5Teacher: "", Wed6Teacher: "", Wed7Teacher: "", Wed8Teacher: "", Wed9Teacher: "",     Thur1Teacher: "", Thur2Teacher: "", Thur3Teacher: "", Thur4Teacher: "", Thur5Teacher: "", Thur6Teacher: "", Thur7Teacher: "", Thur8Teacher: "", Thur9Teacher: "", Fri1Teacher: "", Fri2Teacher: "", Fri3Teacher: "", Fri4Teacher: "", Fri5Teacher: "", Fri6Teacher: "", Fri7Teacher: "", Fri8Teacher: "", Fri9Teacher: "" })
               )
             .catch(err=> console.log(err));
             
@@ -240,6 +226,7 @@ class NewStudent extends React.Component {
                         onClick={this.handleFormSubmit}
                         >Add New Student
                         </FormBtn>
+                        <button onClick={this.testRoute}>Test Route</button>
                     </div>
                 </div>
                 
