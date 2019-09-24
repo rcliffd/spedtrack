@@ -1,18 +1,18 @@
 import React from "react";
 
-function ClassDays() {
+function ClassDays(props) {
     return (
         <div>
         {/* // <div className="col-md-6"> */}
             <h4>Class Days</h4>
             
             <div className="custom-control custom-checkbox">
-            <input type="checkbox" className="custom-control-input" id="customCheck1"/>
+            <input type="checkbox" className="custom-control-input" id="customCheck1" onChange={props.handleInputChange} value="Mon"/>
             <label className="custom-control-label" htmlFor="customCheck1">Monday</label>
             </div>
 
             <div className="custom-control custom-checkbox">
-            <input type="checkbox" className="custom-control-input" id="customCheck2"/>
+            <input type="checkbox" className="custom-control-input" id="customCheck2" onChange={props.handleInputChange} value="Tues"/>
             <label className="custom-control-label" htmlFor="customCheck2">Tuesday</label>
             </div>
 

@@ -4,12 +4,7 @@ function NewScheduleTable() {
     return (
         <div className="row">
             <div className="card col-md-12">
-        
-        
-            
-                
-                   
-                    {/* <div className="card-header">Student</div> */}
+
                     
                     <div className="card-body">
                         <table className="table table-sm table-hover" id="schedule-table">
