@@ -18,8 +18,7 @@ function BlockCard() {
                 <div id="collapseOne" className="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
                 <div className="card-body">
                     <StudentCard></StudentCard>
-                    <StudentCard></StudentCard>
-                    <StudentCard></StudentCard>
+                    
 
                 {/* <div classname="card student-card">
                     <h5>Student Name</h5>
