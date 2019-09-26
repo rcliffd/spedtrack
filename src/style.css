@@ -68,6 +68,14 @@ button.navbar-toggler {
     margin-bottom: 20px;
 }
 
+#SPED-options-btn {
+    margin: 5px;
+    max-width: 150px;
+    font-size: 15px;
+    padding: 0px;
+    
+}
+
 
 
 span.navbar-toggler-icon {
@@ -87,6 +95,7 @@ span.navbar-toggler-icon {
    text-shadow: 0px 8px 8px rgba(0, 0, 0, 0.50);
    line-height: 50px;
    border-radius: 0px;
+   margin-bottom: 15px;
    
 }
 

@@ -22,7 +22,7 @@ function NewScheduleTable() {
                                 <tr className="tr-head">
                                     <th scope="col">Teacher Name</th>
                                     
-                                    <th scope="col">Hours/Block</th>
+                                    <th scope="col">Hours / Block</th>
                                     <th scope="col">Days</th>  
                                 </tr>
 

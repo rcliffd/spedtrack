@@ -10,6 +10,9 @@ export function StudentOption({ children }) {
 
 export function StudentSelect({ children }) {
     return (
-        <select className="studentSelect">{children}</select>
+        <div>
+        <h4>Select Student</h4>
+        <select className="form-control">{children}</select>
+        </div>
     )
 }
