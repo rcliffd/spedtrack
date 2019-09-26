@@ -1,6 +1,11 @@
 import React from "react";
 
+
+
+
 function NewScheduleTable() {
+    
+        
     return (
         <div className="row">
             <div className="card col-md-12">
@@ -13,9 +18,10 @@ function NewScheduleTable() {
                                     <th scope="col">Teacher Name</th>
                                     
                                     <th scope="col">Hours/Block</th>
-                                    <th scope="col">Days</th>
-                                    
+                                    <th scope="col">Days</th>  
                                 </tr>
+
+                               
                             </thead>
                             <tbody>
                             </tbody>
