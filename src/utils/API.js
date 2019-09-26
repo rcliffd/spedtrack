@@ -12,6 +12,9 @@ export default {
   getStudentsBySPED: function(SPEDteacher) {
     return axios.get("/api/students/" + SPEDteacher);
     },
+  getStudentById: function(id) {
+    return axios.get("/api/students/test/" + id);
+  },
   // Get students by day, hour, and teacher, for Blockcard components
   getStudentsByDayAndHour: function(DayBlockTeacher, TeacherName) {
     return axios.get("/api/students/" + DayBlockTeacher + "/" + TeacherName)

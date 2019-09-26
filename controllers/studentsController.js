@@ -3,7 +3,7 @@ const Student = require("../models/student");
 module.exports = {
     find: function(req, res) {
       Student
-        .find(req.params.SPEDteacher)
+        .find({SPEDteacher : req.params.SPEDteacher})
         .then(dbModel => res.json(dbModel))
         .catch(err => res.status(422).json(err));
     },
@@ -13,9 +13,10 @@ module.exports = {
         .then(dbModel => res.json(dbModel))
         .catch(err => res.status(422).json(err));
     },
-    findById: function(req, res) {
+    findStudent: function(req, res) {
+      console.log(req.params.id)
         Student
-          .findById(req.params.id)
+          .findOne({_id : req.params.id})
           .then(dbModel => res.json(dbModel))
           .catch(err => res.status(422).json(err));
     },

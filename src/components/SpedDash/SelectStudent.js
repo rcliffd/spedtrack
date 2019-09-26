@@ -1,15 +1,16 @@
 import React from "react";
 
-export function StudentOption({ children }) {
+
+export function StudentOption(props) {
 
     return (
-        <option className="studentOption">{children}</option>
+        <option className="studentOption" value={props.value}>{props.name}</option>
     )
 
 };
 
-export function StudentSelect({ children }) {
+export function StudentSelect(props) {
     return (
-        <select className="studentSelect">{children}</select>
+        <select className="studentSelect" onChange={props.getStudentById}>{props.children}</select>
     )
 }
