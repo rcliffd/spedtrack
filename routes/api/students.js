@@ -6,18 +6,21 @@ router
   .post(studentsController.create)
   .get(studentsController.findAll)
 
-// Matches with "/api/students/:SPEDteacher"
+// Matches with "/api/students/:id"
+router
+  .route("/test/:id")
+  .get(studentsController.findStudent)
+  .put(studentsController.update)
+  .delete(studentsController.delete)
+
+  // Matches with "/api/students/:SPEDteacher"
 router
   .route("/:SPEDteacher")
   .get(studentsController.find);
 
 
-// Matches with "/api/students/:id"
 router
-  .route("/:id")
-  .get(studentsController.findById)
-  .put(studentsController.update)
-  .delete(studentsController.delete)
-
+  .route("/:DayBlockTeacher/:TeacherName")
+  .get(studentsController.findByDayAndBlockTeacher)
 
 module.exports = router;

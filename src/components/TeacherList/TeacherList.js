@@ -8,11 +8,12 @@ function TeacherList(props) {
             <h4>Teacher</h4>
                                 <select className="form-control" name="teacherList" onChange={props.handleInputChange}>
                                 {/**put onchagne here */}
-                                <option value="1">teacher 1</option>
-                                <option value="2">teacher 2</option>
-                                <option value="3">teacher 3</option>
-                                <option value="4">teacher 4</option>
-                                <option value="5">teacher 5</option>
+                                <option value="">Select Teacher...</option>
+                                <option value="Josh Jackson">Josh Jackson</option>
+                                <option value="John Geipel">John Geipel</option>
+                                <option value="Rich Dutton">Rich Dutton</option>
+                                <option value="Ashliegh Lund">Ashliegh Lund</option>
+                                <option value="Josh Naylor">Josh Naylor</option>
                                 
                                 </select>
                             </div>
