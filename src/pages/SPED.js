@@ -68,7 +68,7 @@ class SPED extends React.Component {
                         <h3>No Students to Display</h3>
                       )} 
                 
-                {this.state.clickedStudent ? (
+                {/* {this.state.clickedStudent ? (
                         <GoalsList>
                             <Goal></Goal>
                         </GoalsList>
@@ -81,7 +81,7 @@ class SPED extends React.Component {
                         </ServiceList>
                     ) : (
                         <h3>Select Student to See Current Services</h3>
-                    )}
+                    )} */}
 
                     
                 

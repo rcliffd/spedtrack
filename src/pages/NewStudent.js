@@ -102,6 +102,10 @@ class NewStudent extends React.Component {
         .then(res => console.log(res))
     }
 
+    // addToTable=event=> {
+
+    // }
+
 
     handleFormSubmit=event=> {
         event.preventDefault();
