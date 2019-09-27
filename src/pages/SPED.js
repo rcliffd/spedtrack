@@ -37,8 +37,8 @@ class SPED extends React.Component {
     getStudentById=event=> {
         const id = event.target.value;
         API.getStudentById(id)
-        .then(res => this.setState({ clickedStudent: res.data.studentName }, function() {
-            console.log(this.state.clickedStudent)
+        .then(res => this.setState({ clickedStudent : res.data.studentName, goal1 : res.data.goal1, goal2 : res.data.goal2, goal3 : res.data.goal3, goal4 : res.data.goal4, goal5 : res.data.goal5 }, function() {
+            console.log(this.state)
         }))
         .catch(err => console.log(err))
     }
