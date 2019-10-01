@@ -2,6 +2,7 @@ import React from "react";
 import Jumbotron from "../components/Jumbotron/Jumbotron";
 
 import { StudentOption, StudentSelect } from "../components/SpedDash/SelectStudent";
+import { Goal, GoalsList, Service, ServiceList } from "../components/SpedDash/GoalsAndServices";
 import API from "../utils/API";
 
 
@@ -60,16 +61,12 @@ class SPED extends React.Component {
                 {this.state.students.length ? (
                     <StudentSelect getStudentById={this.getStudentById}>
                         {this.state.students.map(student => 
-                            <StudentOption key={student._id} value={student._id} name={student.studentName}>
-
-                            </StudentOption>
+                            <StudentOption key={student._id} value={student._id} name={student.studentName}></StudentOption>
                         )}
                     </StudentSelect>
                     ) : (
                         <h3>No Students to Display</h3>
-                      )} 
-                
-                
+                      )}               
                 <div className="container">
                     <a href="/NewStudent" className="btn btn-outline-secondary" role="button" aria-pressed="true">Add New Student</a>
                 </div>

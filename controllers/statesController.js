@@ -1,9 +1,10 @@
 const db = require("../models/state");
 
 module.exports = {
-    findAll: function(req, res) {
+    findOne: function(req, res) {
       db.State
-        .find(req.query)
+        .findOne({ stateName : req.params.stateName})
+        .populate("districts")
         .then(dbModel => res.json(dbModel))
         .catch(err => res.status(422).json(err));
     },

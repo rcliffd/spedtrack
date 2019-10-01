@@ -1,6 +1,9 @@
 import axios from "axios";
 
 export default {
+  getStateDistricts: function(stateName) {
+    return axios.get("/api/states/" + stateName)
+  },
   getStudents: function(data) {
     return axios.get("/api/students")
   },

@@ -14,7 +14,6 @@ module.exports = {
         .catch(err => res.status(422).json(err));
     },
     findStudent: function(req, res) {
-      console.log(req.params.id)
         Student
           .findOne({_id : req.params.id})
           .then(dbModel => res.json(dbModel))

@@ -1,8 +1,8 @@
 const router = require("express").Router();
 const districtsController = require("../../controllers/districtsController");
 
-// Matches with "/api/states"
-router.route("/")
+// Matches with "/api/districts/:USstate"
+router.route("/:USstate")
   .get(districtsController.findAll);
 
 
