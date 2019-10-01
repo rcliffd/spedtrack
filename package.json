@@ -14,9 +14,8 @@
     "react-scripts": "3.1.1"
   },
   "scripts": {
-    "dev": "concurrently \"nodemon server.js\" \"npm run start-react\"",
-    "start": "node server.js",
-    "react-start": "react-scripts build",
+    "dev": "concurrently \"node server.js\" \"npm start\"",
+    "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
@@ -46,5 +45,6 @@
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/rcliffd/spedtrack/issues"
-  }  
+  },
+  "homepage": "https://github.com/rcliffd/spedtrack#readme"
 }
