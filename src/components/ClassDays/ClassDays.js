@@ -17,22 +17,22 @@ function ClassDays(props) {
             </div>
 
             <div className="custom-control custom-checkbox">
-            <input type="checkbox" className="custom-control-input" id="customCheck3"/>
+            <input type="checkbox" className="custom-control-input" id="customCheck3" onChange={props.handleInputChange} value="Wed"/>
             <label className="custom-control-label" htmlFor="customCheck3">Wednesday</label>
             </div>
 
             <div className="custom-control custom-checkbox">
-            <input type="checkbox" className="custom-control-input" id="customCheck4"/>
+            <input type="checkbox" className="custom-control-input" id="customCheck4" onChange={props.handleInputChange} value="Thur"/>
             <label className="custom-control-label" htmlFor="customCheck4">Thursday</label>
             </div>
 
             <div className="custom-control custom-checkbox">
-            <input type="checkbox" className="custom-control-input" id="customCheck5"/>
+            <input type="checkbox" className="custom-control-input" id="customCheck5" onChange={props.handleInputChange} value="Fri"/>
             <label className="custom-control-label" htmlFor="customCheck5">Friday</label>
             </div>
 
             <div className="custom-control custom-checkbox">
-            <input type="checkbox" className="custom-control-input" id="customCheck6"/>
+            <input type="checkbox" className="custom-control-input" id="customCheck6" onChange={props.handleInputChange} value="Week"/>
             <label className="custom-control-label" htmlFor="customCheck6">All Week</label>
             </div>
 

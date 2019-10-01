@@ -9,6 +9,10 @@
     
 }
 
+body {
+    background-color: rgba(211, 211, 211, 0.40);
+}
+
 .btn-outline-secondary:hover {
     background-color: rgb(212, 191, 2); 
     color: white;

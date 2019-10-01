@@ -80,19 +80,73 @@ class NewStudent extends React.Component {
                 console.log(this.state)
             })
         }
-        if(type === "checkbox") {
-            let key = `${value}${this.state.hours}Teacher`;
-            console.log(key)
-            console.log(event.target.checked)
+        if(type === "checkbox" && value === "Week") {
+          
+            let key;
+            let day;
+            let days = ["Mon", "Tues", "Wed", "Thur", "Fri"];
+            
+            // console.log(days);
+            
+            let i;
+            for (i = 0; i < days.length; i++) {
+            day = days[i]
+            // console.log(day)
+
+            key = day +`${this.state.hours}Teacher`
+           
+            
+            
+            
+            // console.log(key)
+
+
+
+            this.setState({
+                key : name 
+            }, function() {
+                console.log(this.state)
+            })
+            
+
+            console.log(key)}
+                console.log(event.target.checked)
             this.setState({
                 [key] : event.target.checked ? this.state.TeacherList : ""
             }, function() {
                 console.log(this.state)
             })
-        } else {
+        } else if (type === "checkbox") {
+                let key = `${value}${this.state.hours}Teacher`;
+                console.log(key)
+                console.log(event.target.checked)
+                this.setState({
+                    [key] : event.target.checked ? this.state.TeacherList : ""
+                }, function() {
+                    console.log(this.state)
+                })
+            } else {
+                this.setState({
+                    [name] : value
+                })
+        
             this.setState({
                 [name] : value
             })
+        // if(type === "checkbox") {
+        //     let key = `${value}${this.state.hours}Teacher`;
+        //     console.log(key)
+        //     console.log(event.target.checked)
+        //     this.setState({
+        //         [key] : event.target.checked ? this.state.TeacherList : ""
+        //     }, function() {
+        //         console.log(this.state)
+        //     })
+        // } else {
+        //     this.setState({
+        //         [name] : value
+        //     })
+        
         }
     }
 
