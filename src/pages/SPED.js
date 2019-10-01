@@ -66,26 +66,7 @@ class SPED extends React.Component {
                     </StudentSelect>
                     ) : (
                         <h3>No Students to Display</h3>
-                      )} 
-                
-                {/* {this.state.clickedStudent ? (
-                        <GoalsList>
-                            <Goal></Goal>
-                        </GoalsList>
-                    ) : (
-                        <h3>Select Student to See Current Goals</h3>
-                    )}
-                {this.state.clickedStudent ? (
-                        <ServiceList>
-                            <Service></Service>
-                        </ServiceList>
-                    ) : (
-                        <h3>Select Student to See Current Services</h3>
-                    )} */}
-
-                    
-                
-                
+                      )}               
                 <div className="container">
                     <a href="/NewStudent" className="btn btn-outline-secondary" role="button" aria-pressed="true">Add New Student</a>
                 </div>

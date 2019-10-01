@@ -3,7 +3,8 @@ const db = require("../models/district");
 module.exports = {
     findAll: function(req, res) {
       db.District
-        .find(req.query)
+        .findOne({stateName : req.params.USstate})
+        .populate()
         .then(dbModel => res.json(dbModel))
         .catch(err => res.status(422).json(err));
     },
