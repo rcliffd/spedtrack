@@ -12,6 +12,7 @@ import API from "../utils/API";
 
 class NewUser extends React.Component {
     state = {
+        USstates: [],
         districts: [],
         sites: [],
         teachers: [],
@@ -20,6 +21,10 @@ class NewUser extends React.Component {
         codeMatch: false
     }
 
+   componentDidMount() {
+       this.getDatabaseStates();
+   }
+
    handleStateClicked=event=> {
        const USstate = event.target.value
        API.getStateDistricts(USstate)
@@ -27,6 +32,14 @@ class NewUser extends React.Component {
            console.log(this.state)
        }))
        .catch(err => console.log(err))
+   }
+
+   getDatabaseStates=()=> {
+        API.getDatabaseStates()
+        .then(res => this.setState({ USstates : res.data }, function() {
+            console.log(this.state)
+        }))
+        .catch(err => console.log(err))
    }
 
 
@@ -39,7 +52,11 @@ class NewUser extends React.Component {
                 <div className="container">
                     <div className="row">
                         <div className="col-md-6 card">
-                        <NewUserState handleStateClicked={this.handleStateClicked}></NewUserState>
+                        <NewUserState handleStateClicked={this.handleStateClicked}>
+                            {/* {this.state.USstates.map(USstate => 
+                                <option>{USstate.stateName}</option>
+                                )} */}
+                        </NewUserState>
                         {this.state.districts.length ? (
                             <NewUserDistrict></NewUserDistrict>
                         ) : (

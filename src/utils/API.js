@@ -1,10 +1,13 @@
 import axios from "axios";
 
 export default {
+  getDatabaseStates: function() {
+    return axios.get("/api/states")
+  },
   getStateDistricts: function(stateName) {
     return axios.get("/api/states/" + stateName)
   },
-  getStudents: function(data) {
+  getStudents: function() {
     return axios.get("/api/students")
   },
   // Post a new student
