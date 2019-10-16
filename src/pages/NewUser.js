@@ -36,7 +36,7 @@ class NewUser extends React.Component {
 
    getDatabaseStates=()=> {
         API.getDatabaseStates()
-        .then(res => this.setState({ USstates : res.data }, function() {
+        .then(res => this.setState({ USstates : res.data.stateName }, function() {
             console.log(this.state)
         }))
         .catch(err => console.log(err))

@@ -2,7 +2,6 @@ import React from "react";
 import Jumbotron from "../components/Jumbotron/Jumbotron";
 
 import { StudentOption, StudentSelect } from "../components/SpedDash/SelectStudent";
-import { Goal, GoalsList, Service, ServiceList } from "../components/SpedDash/GoalsAndServices";
 import API from "../utils/API";
 
 
