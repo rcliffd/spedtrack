@@ -20,6 +20,9 @@ function NewScheduleTable() {
                                     <th scope="col">Hours / Block</th>
                                     <th scope="col">Days</th>  
                                 </tr>
+                                
+
+                                
 
                                
                             </thead>

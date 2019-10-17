@@ -3,8 +3,9 @@
     width: 200px;
     margin: 20px 30px;
     background-color: white;
-    border: 1px solid rgb(212, 191, 2);
-    color:  rgb(212, 191, 2);
+    /* border: 1px solid rgb(212, 191, 2); */
+    border: 1px solid rgb(35, 35, 146);
+    color: rgb(35, 35, 146);
     border-radius: 25px;
     
 }
@@ -14,7 +15,7 @@ body {
 }
 
 .btn-outline-secondary:hover {
-    background-color: rgb(212, 191, 2); 
+    background-color: rgb(35, 35, 146);
     color: white;
 }
 
@@ -32,9 +33,9 @@ body {
 
 .card {
     padding: 20px 20px;
-    border: 0.5px solid rgba(212, 191, 2, 0.25);
+    border: 0.5px solid rgba(2, 86, 212, 0.158);
     box-shadow: 0px 7px 7px rgba(119, 136, 153, 0.15);
-    border-radius: 0px;
+    border-radius: 10px;
     /* border: none;
     box-shadow: 0px 7px 5px rgba(119, 136, 153, 0.30);
     border-radius: 20px; */
@@ -49,12 +50,13 @@ li {
 }
 
 .btn-link {
-    color:  rgb(212, 191, 2);
+    color:  rgb(35, 35, 146);
 }
 
 .navbar-expand-lg {
-    background-color: rgb(212, 191, 2) !important;
+    /* background-color: rgb(212, 191, 2) !important; */
     color: white !important;
+    background-color:  rgba(61, 61, 73, 0.74) !important;
     
 }
 
@@ -91,7 +93,13 @@ span.navbar-toggler-icon {
 }
 
 .jumbotron{
-    background-color: rgb(212, 191, 2);
+    /* background-color: rgb(212, 191, 2); */
+    background-image: url("./images/kids.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 120px 16px 150px 16px !important;
+    
     color: white; 
     font-size: 50px;
     -webkit-text-stroke-width: 1px;
@@ -105,11 +113,13 @@ span.navbar-toggler-icon {
 
 h4 {
     margin: 15px 0px 5px 0px;
-    color: rgb(212, 191, 2);
+    color:rgb(35, 35, 146);
 }
 
 .custom-checkbox {
     display: inline-block;
     margin: 0px 10px;
 }
+
+
 
