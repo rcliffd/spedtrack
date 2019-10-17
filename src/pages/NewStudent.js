@@ -71,6 +71,13 @@ class NewStudent extends React.Component {
 
     handleInputChange=event=> {
         const {name, value, type} = event.target;
+
+        
+        let key = [`Mon${this.state.hours}Teacher`, `Tues${this.state.hours}Teacher`, `Wed${this.state.hours}Teacher`, `Thur${this.state.hours}Teacher`, `Fri${this.state.hours}Teacher`]
+        let i;
+           
+        
+        
         console.log(name, value, type)
         if(type === "select-one" && name === "teacherList") {
             let teacher = `${value}`
@@ -81,41 +88,26 @@ class NewStudent extends React.Component {
             })
         }
         if(type === "checkbox" && value === "Week") {
-          
-            let key;
-            let day;
-            let days = ["Mon", "Tues", "Wed", "Thur", "Fri"];
-            
-            // console.log(days);
-            
-            let i;
-            for (i = 0; i < days.length; i++) {
-            day = days[i]
-            // console.log(day)
 
-            key = day +`${this.state.hours}Teacher`
-           
             
             
+            for ( i = 0; i < key.length; i++) {
             
+
+            this.setState({
+                [key[i]]: event.target.checked ? this.state.TeacherList : ""
+            }, function() {
+                console.log(this.state)
+            })}
+            
+
             // console.log(key)
-
-
-
-            this.setState({
-                key : name 
-            }, function() {
-                console.log(this.state)
-            })
-            
-
-            console.log(key)}
-                console.log(event.target.checked)
-            this.setState({
-                [key] : event.target.checked ? this.state.TeacherList : ""
-            }, function() {
-                console.log(this.state)
-            })
+            //     console.log(event.target.checked)
+            // this.setState({
+            //     [key[i]] : event.target.checked ? this.state.TeacherList : ""
+            // }, function() {
+            //     console.log(this.state)
+            // })}
         } else if (type === "checkbox") {
                 let key = `${value}${this.state.hours}Teacher`;
                 console.log(key)
