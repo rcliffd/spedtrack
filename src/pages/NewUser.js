@@ -1,5 +1,6 @@
 import React from "react";
 import Jumbotron from "../components/Jumbotron/Jumbotron";
+
 import NewUserState from "../components/NewUser/NewUserState"
 import NewUserDistrict from "../components/NewUser/NewUserDistrict"
 import NewUserSite from "../components/NewUser/NewUserSite"
@@ -7,6 +8,7 @@ import NewUserName from "../components/NewUser/NewUserName"
 import SchoolCode from "../components/NewUser/SchoolCode"
 import FormBtn from "../components/NewUser/FormBtn"
 import API from "../utils/API";
+
 
 
 
@@ -78,11 +80,13 @@ class NewUser extends React.Component {
                         {this.state.teacherClicked ? (
                         <div>
                         <SchoolCode></SchoolCode>
+
                         <FormBtn id="Submit" onClick={this.runCheckCode}>Submit</FormBtn>
                         </div>                           
                         ) : (
                             <h5> </h5>
                         )}
+
 
                         </div>
                     </div>

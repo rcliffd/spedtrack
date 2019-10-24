@@ -6,10 +6,12 @@ function NewUserState(props) {
             
         <div>
             <h4>Select State</h4>
+
                 <select className="form-control" name="selectState" onChange={props.handleStateClicked}>
                         
                 </select>		
         </div>
+
 
         
     );

@@ -6,7 +6,10 @@ function SchoolCode(props) {
             
             <div>
             <h4>School Code</h4>
+
+
                 <input className="form-control" name="schoolCode" type="text" onChange={props.handleInputChange}></input>
+
             </div>
         
         

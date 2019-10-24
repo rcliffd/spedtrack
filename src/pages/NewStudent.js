@@ -11,8 +11,13 @@ import API from "../utils/API";
 import NewScheduleTable from "../components/StudentInfo/NewScheduleTable";
 
 
+var days = [];
+
+
 
 class NewStudent extends React.Component {
+
+
 
     state={
         students: [],
@@ -69,9 +74,21 @@ class NewStudent extends React.Component {
         Fri9Teacher: "" 
     }
 
+    
+    
+
     handleInputChange=event=> {
         const {name, value, type} = event.target;
+
+        
+        let key = [`Mon${this.state.hours}Teacher`, `Tues${this.state.hours}Teacher`, `Wed${this.state.hours}Teacher`, `Thur${this.state.hours}Teacher`, `Fri${this.state.hours}Teacher`]
+        let i;
+        
+           
+        
+        
         console.log(name, value, type)
+        
         if(type === "select-one" && name === "teacherList") {
             let teacher = `${value}`
             this.setState({
@@ -80,31 +97,101 @@ class NewStudent extends React.Component {
                 console.log(this.state)
             })
         }
-        if(type === "checkbox") {
-            let key = `${value}${this.state.hours}Teacher`;
-            console.log(key)
-            console.log(event.target.checked)
+        if(type === "checkbox" && value === "Week") {
+            days.push(`${value}`)
+
+            
+            
+            for ( i = 0; i < key.length; i++) {
+            
+
             this.setState({
-                [key] : event.target.checked ? this.state.TeacherList : ""
+                [key[i]]: event.target.checked ? this.state.TeacherList : ""
             }, function() {
                 console.log(this.state)
-            })
-        } else {
+            })}
+            
+
+            // console.log(key)
+            //     console.log(event.target.checked)
+            // this.setState({
+            //     [key[i]] : event.target.checked ? this.state.TeacherList : ""
+            // }, function() {
+            //     console.log(this.state)
+            // })}
+        } else if (type === "checkbox") {
+                days.push(`${value}`)
+                let key = `${value}${this.state.hours}Teacher`;
+                console.log(key)
+                // console.log(event.target.checked)
+                this.setState({
+                    [key] : event.target.checked ? this.state.TeacherList : ""
+                }, function() {
+                    console.log(this.state)
+                })
+            } else {
+                this.setState({
+                    [name] : value
+                })
+        
             this.setState({
                 [name] : value
             })
+        // if(type === "checkbox") {
+        //     let key = `${value}${this.state.hours}Teacher`;
+        //     console.log(key)
+        //     console.log(event.target.checked)
+        //     this.setState({
+        //         [key] : event.target.checked ? this.state.TeacherList : ""
+        //     }, function() {
+        //         console.log(this.state)
+        //     })
+        // } else {
+        //     this.setState({
+        //         [name] : value
+        //     })
+        
         }
+        
     }
 
-    testRoute=event=> {
-        event.preventDefault();
-        API.getStudentsByDayAndHour("Mon4Teacher", "JoshJackson")
-        .then(res => console.log(res))
-    }
-
-    // addToTable=event=> {
-
+    // testRoute=event=> {
+    //     event.preventDefault();
+    //     API.getStudentsByDayAndHour("Mon4Teacher", "JoshJackson")
+    //     .then(res => console.log(res))
     // }
+
+    
+
+    handleHoursSubmit=event=> {
+        event.preventDefault();
+        
+        var studentDiv = document.getElementById("schedule-table");
+        var newStudentRow = document.createElement("tr");
+        var newStudentTeacher = document.createElement("td");
+        var newStudentHours = document.createElement("td");
+        var newStudentDays = document.createElement("td");
+        
+        newStudentTeacher.textContent = this.state.TeacherList
+        newStudentHours.textContent = this.state.hours
+        
+        newStudentDays.textContent = days.join(", ");
+        
+
+        newStudentRow.append(newStudentTeacher);
+        newStudentRow.append(newStudentHours);
+        newStudentRow.append(newStudentDays);
+         
+        studentDiv.append(newStudentRow);
+
+        days = [];
+        console.log(days)
+
+        
+
+    }
+
+
 
 
     handleFormSubmit=event=> {
@@ -176,7 +263,7 @@ class NewStudent extends React.Component {
             })
             .then(res =>
                 
-                this.setState({ students: res.data, studentName: "", mathLevel: "", readingLevel: "",         SPEDteacher: "", Mon1Teacher: "", Mon2Teacher: "", Mon3Teacher: "", Mon4Teacher: "", Mon5Teacher: "", Mon6Teacher: "", Mon7Teacher: "", Mon8Teacher: "", Mon9Teacher: "", Tues1Teacher: "", Tues2Teacher: "", Tues3Teacher: "", Tues4Teacher: "", Tues5Teacher: "", Tues6Teacher: "", Tues7Teacher: "", Tues8Teacher: "", Tues9Teacher: "", Wed1Teacher: "", Wed2Teacher: "", Wed3Teacher: "", Wed4Teacher: "", Wed5Teacher: "", Wed6Teacher: "", Wed7Teacher: "", Wed8Teacher: "", Wed9Teacher: "",     Thur1Teacher: "", Thur2Teacher: "", Thur3Teacher: "", Thur4Teacher: "", Thur5Teacher: "", Thur6Teacher: "", Thur7Teacher: "", Thur8Teacher: "", Thur9Teacher: "", Fri1Teacher: "", Fri2Teacher: "", Fri3Teacher: "", Fri4Teacher: "", Fri5Teacher: "", Fri6Teacher: "", Fri7Teacher: "", Fri8Teacher: "", Fri9Teacher: "" })
+                this.setState({ students: res.data, studentName: "", mathLevel: "", readingLevel: "", SPEDteacher: "", Mon1Teacher: "", Mon2Teacher: "", Mon3Teacher: "", Mon4Teacher: "", Mon5Teacher: "", Mon6Teacher: "", Mon7Teacher: "", Mon8Teacher: "", Mon9Teacher: "", Tues1Teacher: "", Tues2Teacher: "", Tues3Teacher: "", Tues4Teacher: "", Tues5Teacher: "", Tues6Teacher: "", Tues7Teacher: "", Tues8Teacher: "", Tues9Teacher: "", Wed1Teacher: "", Wed2Teacher: "", Wed3Teacher: "", Wed4Teacher: "", Wed5Teacher: "", Wed6Teacher: "", Wed7Teacher: "", Wed8Teacher: "", Wed9Teacher: "",     Thur1Teacher: "", Thur2Teacher: "", Thur3Teacher: "", Thur4Teacher: "", Thur5Teacher: "", Thur6Teacher: "", Thur7Teacher: "", Thur8Teacher: "", Thur9Teacher: "", Fri1Teacher: "", Fri2Teacher: "", Fri3Teacher: "", Fri4Teacher: "", Fri5Teacher: "", Fri6Teacher: "", Fri7Teacher: "", Fri8Teacher: "", Fri9Teacher: "" })
               )
             .catch(err=> console.log(err));
             
@@ -195,70 +282,65 @@ class NewStudent extends React.Component {
                 <div className="container">
                 <div className="row">
                     <div className="col-md-6 card">
-                    <StudentInfo/>
-                    <form>
-                    <Input
-                    value={this.state.studentName}
-                    handleInputChange={this.handleInputChange}
-                    name="studentName"
-                    type="text"
-                    placeholder="Student's First and Last Name"
-                    />
-                    </form>
-                    <FormOptions
-                    value={this.state.value}
-                    handleInputChange={this.handleInputChange}
-                    />
+                        <StudentInfo/>
+                        <form>
+                        <Input
+                        value={this.state.studentName}
+                        handleInputChange={this.handleInputChange}
+                        name="studentName"
+                        type="text"
+                        placeholder="Student's First and Last Name"
+                        />
+                        </form>
+                        <FormOptions
+                        value={this.state.value}
+                        handleInputChange={this.handleInputChange}
+                        />
                     </div>
                 
                     <div className="col-md-6 card">
 
-                        
-                          
+                        <div className="row">
+                            <TeacherList value={this.state.value}
+                            handleInputChange={this.handleInputChange}>
+                            </TeacherList>
+                            <Hours
+                            handleInputChange={this.handleInputChange}>
+                            </Hours>
+                            </div>
+                            <ClassDays
+                            handleInputChange={this.handleInputChange}>
+                            </ClassDays>
 
-                    <div className="row">
-                    <TeacherList value={this.state.value}
-                    handleInputChange={this.handleInputChange}>
-                    </TeacherList>
-                    <Hours
-                    handleInputChange={this.handleInputChange}>
-                    </Hours>
-                    </div>
-                    <ClassDays
-                    handleInputChange={this.handleInputChange}>
-                    </ClassDays>
 
-                    
-                    <FormBtn
-                    id="hourSubmit"
-                    onClick={this.handleFormSubmit}
-                    >Submit
-                    </FormBtn>
-                    
-                    
+                            <FormBtn
+                            id="hourSubmit"
+                            onClick={this.handleHoursSubmit}
+                            >Submit
+                            </FormBtn>
 
-                    </div>
-                   
-                </div>
-                <div className="wrapper">
-                    <NewScheduleTable
-                        teacher={this.state.value}>
-                            
-                        </NewScheduleTable>
-                        
-                        
-                </div>
-                <div>
-                        <FormBtn
-                        id="studentSubmit"
-                        onClick={this.handleFormSubmit}
-                        >Add New Student
-                        </FormBtn>
-                        <button onClick={this.testRoute}>Test Route</button>
-                    </div>
-                </div>
+                        </div>
+
                 
-           </div>
+                </div>
+
+                <div className="wrapper">
+                    <NewScheduleTable>
+                        
+                    </NewScheduleTable>
+                </div>
+
+                <div>
+                    <FormBtn
+                    id="studentSubmit"
+                    onClick={this.handleFormSubmit}
+                    >Add New Student
+                    </FormBtn>
+                    {/* <button onClick={this.testRoute}>Test Route</button> */}
+                </div>
+            </div>
+                
+        </div>
        )
    } 
 }
