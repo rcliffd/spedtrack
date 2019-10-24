@@ -27,6 +27,7 @@ function NewScheduleTable() {
                                
                             </thead>
                             <tbody>
+                                {/* <NewScheduleRow></NewScheduleRow> */}
                             </tbody>
                         </table>
                     </div>
@@ -36,5 +37,9 @@ function NewScheduleTable() {
 
     )
 }
+
+// function NewScheduleRow() {
+//     return 
+// }
 
 export default NewScheduleTable;
