@@ -5,6 +5,7 @@ import RegED from "./pages/RegED";
 import SPED from "./pages/SPED";
 import Home from "./pages/Home";
 import NewStudent from "./pages/NewStudent";
+import Admin from "./pages/Admin";
 import Navbar from "./components/Navbar/Navbar";
 
 import './App.css';
@@ -25,6 +26,7 @@ function App() {
           <Route exact path="/SPED" component={SPED} />
           <Route exact path="/NewUser" component={NewUser} />
           <Route exact path="/NewStudent" component={NewStudent} />
+          <Route exact path="/Admin" component={Admin} />
           
           
         </Switch>

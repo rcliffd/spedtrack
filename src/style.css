@@ -100,3 +100,19 @@ h4 {
     margin: 0px 10px;
 }
 
+.adminForm {
+    border: 2px solid rgb(60, 92, 110);
+    margin-top: 6px;
+    margin-bottom: 6px;
+    padding-bottom: 6px;
+    border-radius: 4px;
+}
+
+.adminFormTitle {
+    font-weight: bold;
+}
+
+.adminFormSubTitle {
+    font-weight: bold;
+    font-size: larger;
+}
